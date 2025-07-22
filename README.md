@@ -1,15 +1,21 @@
-# Java Assignment: Classes and Objects
-
-## Tasks
-1. Create a class called `Student` with:
-   - `String name`
-   - `int rollNumber`
-   - `char grade`
-
-2. Create a method `displayDetails()` in the `Student` class that prints student information.
-
-3. In `Main.java`, create a `Student` object, assign sample data, and call `displayDetails()`.
-
-## Submission Instructions
-- Complete the TODOs in `Main.java`
-- Push your code. Your submission will be tested automatically.
+class Student{
+    String name;
+    int rollNumber;
+    char grade;
+    public Student(String name,int rollNumber,char grade){
+        this.name = name;
+        this.rollNumber = rollNumber;
+        this.grade = grade;
+    }
+    public void displayDetails(){
+        System.out.println("Name:\t"+name);
+        System.out.println("Rollnumber:\t"+rollNumber);
+        System.out.println("grade:\t"+grade);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+    Student student1=new Student("siva",66,'A');
+        student1.displayDetails();
+    }
+}
